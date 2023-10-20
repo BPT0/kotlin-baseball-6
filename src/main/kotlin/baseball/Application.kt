@@ -64,6 +64,19 @@ fun main() {
             }
 
             if (ball != 0) print("${ball}볼 ")
+
+            // 컴퓨터가 생성한 숫자 3자리에 대한 결과 제공
+            // 스트라이크 체크: 입력한 숫자가 자리도 맞고 숫자도 맞을때 - 개당 스트라이크
+            var strike = 0
+            for (i: Int in userAnswer.indices) {
+                if (userAnswer[i].toString() == computerAnswer[i].toString())
+                    strike++
+            }
+
+            if (strike != 0) {
+                print("${strike}스트라이크")
+            }
+
         }
 
 

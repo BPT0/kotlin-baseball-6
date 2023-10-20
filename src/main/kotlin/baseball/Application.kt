@@ -48,6 +48,22 @@ fun main() {
                 // 예외 IllegalArgumentException 출력 후 종료
                 throw IllegalArgumentException("3개의 수는 모두 다른 수여야 합니다.")
             }
+
+            // 볼체크 : 입력한 숫자가 자리는 틀리고 숫자만 맞을때 - 개당 볼
+            // 낫싱 체크 : 입력한 숫자가 맞지 않을때 표시x
+
+            var ball = 0
+            for (i: Int in userAnswer.indices) {
+                for (j: Int in userAnswer.indices) {
+                    if (j != i) { // 스트라이크 체크x
+                        if (userAnswer[i].toString() == computerAnswer[j].toString()) {
+                            ball++
+                        }
+                    }
+                }
+            }
+
+            if (ball != 0) print("${ball}볼 ")
         }
 
 

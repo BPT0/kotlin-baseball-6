@@ -142,3 +142,17 @@ while (computer.size() < 3) {
 - 미션은 [kotlin-baseball](https://github.com/woowacourse-precourse/kotlin-baseball-6) 저장소를 Fork & Clone해 시작한다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가한다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 문서를 참고한다.
+
+## 과제 구현 기능 목록 정리
+1. 컴퓨터의 임의 숫자3자리 생성 - random 라이브러리 활용
+2. 사용자로부터 서로다른 3자리 수 입력 안내 표시 및 입력
+  - 예외처리 IllegalArgumentException
+    - a. 2자리수이하의 수 또는 4자리 이하의 수일때
+    - b. 각 자리수의 숫자가 같을때
+3. 입력값 체크
+  a. 볼체크
+  b. 낫싱체크
+  c. 스트라이크 체크
+4.정답 입력시 재시작 문구 표시 및 입력
+  - 예외처리 IllegalArgumentException
+    - 1,2 이외의 수 입력시

@@ -89,6 +89,21 @@ fun main() {
             }
         }
 
+        //  if. 3개의 숫자를 모두 맞혔다면
+        //      종료 안내문구 표시, 개행
+        //      예외처리- 1,2 이외 숫자 입력시 예외 처리
+        println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.")
+        val gameControlNum = readLine()!!.toInt()
+        if (gameControlNum == 1) {
+            continue
+        } else if (gameControlNum == 2) {
+            break
+            // 프로그램 종료 코드 호출(?)
+            // 프로그램 종료 시 `System.exit()`를 호출하지 않는다.
+        } else {
+            // 예외 IllegalArgumentException 출력 후 종료
+            throw IllegalArgumentException()
+        }
 
     }
 
